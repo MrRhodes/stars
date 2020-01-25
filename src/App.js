@@ -4,11 +4,9 @@ import { Layout } from "antd";
 
 import Planet from "./Planet";
 
-// import Globe from "./Globe";
-
 import "./App.css";
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Content } = Layout;
 
 function App() {
   return (

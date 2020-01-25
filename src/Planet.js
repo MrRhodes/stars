@@ -49,9 +49,16 @@ export default () => {
 
     console.log({ land });
 
-    context.beginPath();
-    path(land);
-    context.fill();
+    let x = 0;
+
+    setInterval(() => {
+      projection.rotate([x / 10, 0, 0]);
+      context.clearRect(0, 0, width, height);
+      context.beginPath();
+      path(land);
+      context.fill();
+      x += 5;
+    }, 100);
   }, [land]);
 
   return <canvas className="d3-component" ref={d3Container} />;
